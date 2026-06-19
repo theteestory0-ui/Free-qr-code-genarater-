@@ -1,0 +1,6 @@
+{
+  "name": "Static QR Code Generator",
+  "description": "A modern, minimalistic Static QR Code Generator with premium templates, logo integration, custom styles, and high-resolution exports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
