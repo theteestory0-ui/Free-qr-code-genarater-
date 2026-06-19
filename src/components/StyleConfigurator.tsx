@@ -68,9 +68,9 @@ export function StyleConfigurator({ options, setOptions, logoDataUrl, setLogoDat
         <button
           id="config-tab-style"
           onClick={() => setActiveSubTab('style')}
-          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-medium cursor-pointer transition-all ${
+          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-semibold cursor-pointer transition-all ${
             activeSubTab === 'style'
-              ? 'bg-white dark:bg-zinc-805 text-zinc-900 dark:text-zinc-50 shadow-xs'
+              ? 'bg-white dark:bg-white text-zinc-950 dark:text-zinc-950 shadow-sm'
               : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
           }`}
         >
@@ -80,9 +80,9 @@ export function StyleConfigurator({ options, setOptions, logoDataUrl, setLogoDat
         <button
           id="config-tab-colors"
           onClick={() => setActiveSubTab('colors')}
-          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-medium cursor-pointer transition-all ${
+          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-semibold cursor-pointer transition-all ${
             activeSubTab === 'colors'
-              ? 'bg-white dark:bg-zinc-805 text-zinc-900 dark:text-zinc-50 shadow-xs'
+              ? 'bg-white dark:bg-white text-zinc-950 dark:text-zinc-950 shadow-sm'
               : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
           }`}
         >
@@ -92,9 +92,9 @@ export function StyleConfigurator({ options, setOptions, logoDataUrl, setLogoDat
         <button
           id="config-tab-logo"
           onClick={() => setActiveSubTab('logo')}
-          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-medium cursor-pointer transition-all ${
+          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-semibold cursor-pointer transition-all ${
             activeSubTab === 'logo'
-              ? 'bg-white dark:bg-zinc-805 text-zinc-900 dark:text-zinc-50 shadow-xs'
+              ? 'bg-white dark:bg-white text-zinc-950 dark:text-zinc-950 shadow-sm'
               : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
           }`}
         >
@@ -104,9 +104,9 @@ export function StyleConfigurator({ options, setOptions, logoDataUrl, setLogoDat
         <button
           id="config-tab-frame"
           onClick={() => setActiveSubTab('frame')}
-          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-medium cursor-pointer transition-all ${
+          className={`flex flex-col sm:flex-row items-center justify-center gap-1.5 py-2 px-1 rounded-lg text-xs font-semibold cursor-pointer transition-all ${
             activeSubTab === 'frame'
-              ? 'bg-white dark:bg-zinc-805 text-zinc-900 dark:text-zinc-50 shadow-xs'
+              ? 'bg-white dark:bg-white text-zinc-950 dark:text-zinc-950 shadow-sm'
               : 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-300'
           }`}
         >

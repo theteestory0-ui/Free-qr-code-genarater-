@@ -56,7 +56,14 @@ const INITIAL_FORM_DATA = {
 };
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme');
+      if (saved) return saved === 'dark';
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
   const [activeType, setActiveType] = useState<QRContentType>('url');
   const [formData, setFormData] = useState<any>(INITIAL_FORM_DATA);
   const [options, setOptions] = useState<QRStyleOptions>(DEFAULT_OPTIONS);
@@ -68,6 +75,17 @@ export default function App() {
   useEffect(() => {
     document.title = brandSettings.whiteLabelMode ? 'Static QR Code Generator' : `${brandSettings.brandName} - Premium Static QR Generator`;
   }, [brandSettings]);
+
+  // Sync dark class to root documentElement and save to localStorage
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
 
   // Read actual formatted raw string encoding based on selection
   const currentContentText = generateQRContent(activeType, formData[activeType] || {});
